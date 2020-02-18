@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="" />
+    <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -36,6 +56,7 @@
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -43,32 +64,35 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectId" id="1XtWwiue40OWHYFJK1SXciEe7Ce" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/encoder" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resource" />
     <property name="nodejs_interpreter_path" value="D:/programmer/nodejs/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15319149" />
     <property name="project.structure.side.proportion" value="0.20049505" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\encoder" />
-      <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy" />
-      <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\common\utils" />
-      <recent name="D:\project\idea\xiaomy-netty-client\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.flyue.xiaomy.common.http.vo.resp.login" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.flyue.xiaomy" />
       <recent name="com.flyue.xiaomy.http" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.flyue.xiaomy.common.http.vo.resp.login" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\Desktop\xiaomy-netty-client\src\main\resource" />
+      <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\encoder" />
+      <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy" />
+      <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\common\utils" />
+      <recent name="D:\project\idea\xiaomy-netty-client\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,31 +108,30 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="NatServerApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flyue.xiaomy.NatServerApplication" />
+      <module name="netty-client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NatClientTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xiaomy-netty-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.flyue.xiaomy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.flyue.xiaomy" />
-      <option name="MAIN_CLASS_NAME" value="com.flyue.xiaomy.NatClientTest" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.flyue.xiaomy.NatServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,20 +152,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.NatClientTest.test01" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
@@ -156,18 +165,63 @@
       <updated>1581866111235</updated>
       <workItem from="1581866114145" duration="2793000" />
       <workItem from="1581868916363" duration="1377000" />
-      <workItem from="1581944960711" duration="10099000" />
+      <workItem from="1581944960711" duration="10427000" />
+      <workItem from="1582033817868" duration="8849000" />
+      <workItem from="1582076339064" duration="23631000" />
+      <workItem from="1582188506774" duration="2377000" />
     </task>
+    <task id="LOCAL-00001" summary="着手转发数据包">
+      <created>1582042662425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582042662425</updated>
+    </task>
+    <task id="LOCAL-00002" summary="小蚂蚁内网穿透">
+      <created>1582123222513</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582123222513</updated>
+    </task>
+    <task id="LOCAL-00003" summary="网络异常时重连机制">
+      <created>1582129888654</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582129888654</updated>
+    </task>
+    <task id="LOCAL-00004" summary="日志记录">
+      <created>1582190315844</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582190315844</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="byteBuf.readableBytes()" />
-      </configuration>
-    </watches-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="着手转发数据包" />
+    <MESSAGE value="小蚂蚁内网穿透" />
+    <MESSAGE value="网络异常时重连机制" />
+    <MESSAGE value="日志记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志记录" />
   </component>
 </project>

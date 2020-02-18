@@ -26,7 +26,7 @@ public class TransformProtocolDecoder extends ByteToMessageDecoder {
     protected void decode(ChannelHandlerContext channelHandlerContext,
                           ByteBuf byteBuf, List<Object> list) throws Exception {
         // 可读长度必须大于基本长度
-        logger.info("first readable length:{}", byteBuf.readableBytes());
+        logger.debug("first readable length:{}", byteBuf.readableBytes());
         if (byteBuf.readableBytes() >= BASE_LENGTH) {
             int headLength = 0;
             int bodyLength = 0;
@@ -40,19 +40,20 @@ public class TransformProtocolDecoder extends ByteToMessageDecoder {
                 headLength = byteBuf.readInt();
                 bodyLength = byteBuf.readInt();
                 // 检查head长度值是否超过10KB
-                if (headLength < 0 || headLength > ERROR_HEAD_LENGTH || bodyLength < 0 || bodyLength > ERROR_BODY_LENGTH) {
+                if (headLength <= 0 || headLength > ERROR_HEAD_LENGTH || bodyLength <= 0 || bodyLength > ERROR_BODY_LENGTH) {
                     //重置回原先位置
                     byteBuf.resetReaderIndex();
                     // 抛弃上个字节，重新读取
                     byteBuf.readByte();
-                    logger.info("third readable length:{}", byteBuf.readableBytes());
+                    logger.debug("third readable length:{}", byteBuf.readableBytes());
                     if (byteBuf.readableBytes() < BASE_LENGTH) {
                         // 可读长度不够
                         return;
                     }
                 } else {
                     // 可读长度够，跳出循环，进行数据封装
-                    logger.info("second readable length:{}", byteBuf.readableBytes());
+                    logger.debug("head length:{} body length:{}", headLength, bodyLength);
+                    logger.debug("second readable length:{}", byteBuf.readableBytes());
                     if (byteBuf.readableBytes() >= headLength + bodyLength) {
                         break;
                     }
@@ -63,6 +64,7 @@ public class TransformProtocolDecoder extends ByteToMessageDecoder {
                     return;
                 }
             }
+            logger.debug("read message header length:{} body length:{}", headLength, bodyLength);
             // 消息的长度
             // 读取header数据
             byte[] header = new byte[headLength];

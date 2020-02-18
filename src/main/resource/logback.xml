@@ -13,7 +13,7 @@
     <!-- 定义日志文件 输入位置 -->
     <property name="log_dir" value="logs/"/>
     <!-- 日志最大的历史 30天 -->
-    <property name="maxHistory" value="30"/>
+    <property name="maxHistory" value="90"/>
     <property name="maxFileSize" value="50MB"/>
 
     <!-- DEBUG级别日志 appender -->
@@ -21,12 +21,12 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 过滤器，记录高于DEBUG级别的日志 -->
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>DEBUG</level>
+            <level>INFO</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
             <fileNamePattern>
-                ${log_dir}/webservice.%d{yyyy-MM-dd}.%i.log
+                ${log_dir}/xiaomy-nat.%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
             <!-- 日志最大的历史 60天 -->
             <maxHistory>${maxHistory}</maxHistory>
@@ -62,8 +62,6 @@
     <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate"
             value="DEBUG"/>
     <logger name="com.apache.ibatis" level="TRACE"/>
-    <logger name="com.pachira.boot.webservice" level="DEBUG"/>
-
     <!-- root级别 DEBUG -->
     <root level="info">
         <!-- 文件输出 -->

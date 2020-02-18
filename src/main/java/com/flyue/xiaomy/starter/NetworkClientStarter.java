@@ -1,5 +1,6 @@
-package com.flyue.xiaomy.tcp;
+package com.flyue.xiaomy.starter;
 
+import com.flyue.xiaomy.common.http.vo.resp.login.TunnelInfo;
 import com.flyue.xiaomy.encoder.TransformProtocolDecoder;
 import com.flyue.xiaomy.encoder.TransformProtocolEncoder;
 import io.netty.bootstrap.Bootstrap;
@@ -10,8 +11,9 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-
-import java.util.UUID;
+import io.netty.util.ResourceLeakDetector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @Author: Liu Yuefei
@@ -19,14 +21,34 @@ import java.util.UUID;
  * @Description:
  */
 public class NetworkClientStarter {
-    private final NioEventLoopGroup worker;
-    private final ChannelInboundHandler clientHandler;
+
+    private static final Logger logger = LoggerFactory.getLogger(NetworkClientStarter.class);
+    private final TunnelInfo tunnelInfo;
+
+    private NioEventLoopGroup worker;
+    private ChannelInboundHandler clientHandler;
     private Bootstrap bootstrap;
     private Channel clientChannel;
 
-    public NetworkClientStarter(ChannelInboundHandler handler) {
+    private boolean hasInit = false;
+
+    public NetworkClientStarter(TunnelInfo tunnelInfo) {
+        this.tunnelInfo = tunnelInfo;
+    }
+
+    public TunnelInfo getTunnelInfo() {
+        return tunnelInfo;
+    }
+
+    public void setClientHandler(ChannelInboundHandler channelInboundHandler) {
+        this.clientHandler = channelInboundHandler;
+    }
+
+    public void init() {
+        if (hasInit) {
+            return;
+        }
         this.worker = new NioEventLoopGroup(2);
-        this.clientHandler = handler;
         this.bootstrap = new Bootstrap()
                 .channel(NioSocketChannel.class)
                 .group(this.worker)
@@ -42,10 +64,10 @@ public class NetworkClientStarter {
     }
 
     public void connect(String host, int port) {
+        this.init();
         try {
             ChannelFuture channelFuture = this.bootstrap.connect(host, port).sync();
             this.clientChannel = channelFuture.channel();
-            System.out.println("connect success");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -59,12 +81,25 @@ public class NetworkClientStarter {
         return clientChannel;
     }
 
-    public void close() {
+
+    public void closeChannel() {
+        this.getClientChannel().close();
+    }
+
+    public void waitClose() {
         try {
-            this.clientChannel.closeFuture().sync();
+            logger.info("wait close connect.");
+            this.getClientChannel().closeFuture().sync();
             this.worker.shutdownGracefully().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
         }
+    }
+
+    public void close() {
+        logger.info("start close connect.");
+        this.getClientChannel().close();
+        this.worker.shutdownGracefully();
     }
 }

@@ -1,5 +1,7 @@
 package com.flyue.xiaomy.protocol;
 
+import com.flyue.xiaomy.common.utils.JsonUtils;
+
 import java.util.Arrays;
 
 /**
@@ -27,23 +29,38 @@ public class ProtocolMessage {
         return this.getHeadByte().length;
     }
 
+    public <T> T getHeaderMessage(Class<T> clazz) {
+        return JsonUtils.jsonToPojo(this.head, clazz);
+    }
+
     public byte[] getBody() {
         return body;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         ProtocolMessage message = (ProtocolMessage) o;
-
-        if (head != null ? !head.equals(message.head) : message.head != null) return false;
+        if (head != null ? !head.equals(message.head) : message.head != null) {
+            return false;
+        }
         return Arrays.equals(body, message.body);
     }
 
     @Override
     public String toString() {
+        if (body.length < 1024) {
+            String bodyValue = new String(body);
+            return "ProtocolMessage{" +
+                    "head='" + head + '\'' +
+                    ", body=" + bodyValue +
+                    '}';
+        }
         return "ProtocolMessage{" +
                 "head='" + head + '\'' +
                 ", body=" + Arrays.toString(body) +
