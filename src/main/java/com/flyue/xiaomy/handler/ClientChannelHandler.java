@@ -67,7 +67,10 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
             logger.error("connect local server failed,check local server is active");
             return;
         }
-        serverChannel.connect(clientStarter.getTunnelInfo().getServer_ip(), 8888);
+        if (!serverChannel.connect(clientStarter.getTunnelInfo().getServer_ip(), 8888)) {
+            logger.error("connect remote server failed,check network is usable!");
+            return;
+        }
         ByteBuf buffer = Unpooled.buffer();
         Map<String, Object> header = new HashMap<>();
         header.put("type", "CONN");

@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: Liu Yuefei
@@ -76,7 +77,8 @@ public class BaseClientStarter {
         try {
             logger.info("disconnect {} ", this.getClientChannel().remoteAddress());
             this.getClientChannel().close().sync();
-            this.worker.shutdownGracefully().sync();
+            this.worker.shutdownGracefully(1, 10, TimeUnit.SECONDS);
+            logger.info("close event thread pool finish");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

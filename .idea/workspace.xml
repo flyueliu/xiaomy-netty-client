@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xiaomy.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/NatServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/NatServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/BaseClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/BaseClientStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaomy.properties" beforeDir="false" afterPath="$PROJECT_DIR$/xiaomy.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582190315844</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="从配置文件中读取信息">
+      <created>1582202228979</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582202228979</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +236,7 @@
     <MESSAGE value="小蚂蚁内网穿透" />
     <MESSAGE value="网络异常时重连机制" />
     <MESSAGE value="日志记录" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志记录" />
+    <MESSAGE value="从配置文件中读取信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="从配置文件中读取信息" />
   </component>
 </project>
