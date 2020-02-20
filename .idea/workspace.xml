@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="" />
+    <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/xiaomy.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/NatServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/NatServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,19 +86,22 @@
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\idea\xiaomy-netty-client\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.flyue.xiaomy.common.http.vo.resp.login" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.flyue.xiaomy" />
+      <recent name="com.flyue.xiaomy.http" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell\Desktop\xiaomy-netty-client\src\main\resource" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\encoder" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\common\utils" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.flyue.xiaomy" />
-      <recent name="com.flyue.xiaomy.http" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.flyue.xiaomy.common.http.vo.resp.login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -105,15 +117,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -122,7 +125,7 @@
     </configuration>
     <configuration name="NatServerApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.flyue.xiaomy.NatServerApplication" />
-      <module name="netty-client" />
+      <module name="xiaomy-netty-client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +148,15 @@
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

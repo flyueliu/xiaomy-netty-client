@@ -15,6 +15,8 @@ import io.netty.util.ResourceLeakDetector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author: Liu Yuefei
  * @Date: Created in 2020/2/17 21:59
@@ -100,6 +102,11 @@ public class NetworkClientStarter {
     public void close() {
         logger.info("start close connect.");
         this.getClientChannel().close();
-        this.worker.shutdownGracefully();
+        this.closeEventLoop();
     }
+
+    public void closeEventLoop() {
+        this.worker.shutdownGracefully(1, 5, TimeUnit.SECONDS);
+    }
+
 }
