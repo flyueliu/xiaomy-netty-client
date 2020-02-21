@@ -77,9 +77,9 @@ public class SmallAntClient {
             networkStarter.waitClose();
         } catch (Exception e) {
             logger.error("与服务器{}:{}建立连接失败!", tunnelInfo.getServer_ip(), 8888);
+            this.networkStarter.closeEventLoop();
             throw new RuntimeException("与远程服务器建立连接失败!");
         }
-
     }
 
 

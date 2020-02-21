@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/BaseClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/BaseClientStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,19 +80,22 @@
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\idea\xiaomy-netty-client\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.flyue.xiaomy.common.http.vo.resp.login" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.flyue.xiaomy" />
+      <recent name="com.flyue.xiaomy.http" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell\Desktop\xiaomy-netty-client\src\main\resource" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\encoder" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\java\com\flyue\xiaomy\common\utils" />
       <recent name="D:\project\idea\xiaomy-netty-client\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.flyue.xiaomy" />
-      <recent name="com.flyue.xiaomy.http" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.flyue.xiaomy.common.http.vo.resp.login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,7 +128,7 @@
     </configuration>
     <configuration name="NatServerApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.flyue.xiaomy.NatServerApplication" />
-      <module name="netty-client" />
+      <module name="xiaomy-netty-client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -202,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582190315844</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="从配置文件中读取信息">
+      <created>1582202228979</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582202228979</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add readme file">
+      <created>1582212116537</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582212116537</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +240,8 @@
     <MESSAGE value="小蚂蚁内网穿透" />
     <MESSAGE value="网络异常时重连机制" />
     <MESSAGE value="日志记录" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志记录" />
+    <MESSAGE value="从配置文件中读取信息" />
+    <MESSAGE value="add readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add readme file" />
   </component>
 </project>

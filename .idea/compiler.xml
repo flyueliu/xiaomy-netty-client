@@ -14,8 +14,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="netty-client" options="-parameters" />
-      <module name="xiaomy-netty-client" options="-parameters" />
+      <module name="netty-client" options="" />
+      <module name="xiaomy-netty-client" options="" />
     </option>
   </component>
 </project>
