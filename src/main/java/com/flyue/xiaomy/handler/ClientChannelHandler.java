@@ -59,15 +59,16 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
     }
 
     private void handleReceiveConnectRequest(ResponseMessageHeader respHeader) {
-        BaseClientStarter clientChannel = new BaseClientStarter();
-        BaseClientStarter serverChannel = new BaseClientStarter();
+        BaseClientStarter clientChannel = new BaseClientStarter(clientStarter.getTunnelInfo().getClient_host(), clientStarter.getTunnelInfo().getClient_port());
+        BaseClientStarter serverChannel = new BaseClientStarter(clientStarter.getTunnelInfo().getServer_ip(), 8888);
         clientChannel.setInitializer(new ForwardChannelInitializer(serverChannel));
         serverChannel.setInitializer(new ForwardChannelInitializer(clientChannel));
-        if (!clientChannel.connect(clientStarter.getTunnelInfo().getClient_host(), clientStarter.getTunnelInfo().getClient_port())) {
+        if (!clientChannel.connect()) {
             logger.error("connect local server failed,check local server is active");
+            clientStarter.refreshTunnelInfo();
             return;
         }
-        serverChannel.connect(clientStarter.getTunnelInfo().getServer_ip(), 8888);
+        serverChannel.connect();
         ByteBuf buffer = Unpooled.buffer();
         Map<String, Object> header = new HashMap<>();
         header.put("type", "CONN");

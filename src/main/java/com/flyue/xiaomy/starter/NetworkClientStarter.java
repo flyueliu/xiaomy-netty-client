@@ -1,6 +1,10 @@
 package com.flyue.xiaomy.starter;
 
+import com.flyue.xiaomy.SmallAntClient;
+import com.flyue.xiaomy.common.http.RestClient;
+import com.flyue.xiaomy.common.http.vo.BaseResponse;
 import com.flyue.xiaomy.common.http.vo.resp.login.TunnelInfo;
+import com.flyue.xiaomy.common.utils.JsonUtils;
 import com.flyue.xiaomy.encoder.TransformProtocolDecoder;
 import com.flyue.xiaomy.encoder.TransformProtocolEncoder;
 import io.netty.bootstrap.Bootstrap;
@@ -14,6 +18,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.ResourceLeakDetector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpMethod;
 
 /**
  * @Author: Liu Yuefei
@@ -23,7 +28,7 @@ import org.slf4j.LoggerFactory;
 public class NetworkClientStarter {
 
     private static final Logger logger = LoggerFactory.getLogger(NetworkClientStarter.class);
-    private final TunnelInfo tunnelInfo;
+    private TunnelInfo tunnelInfo;
 
     private NioEventLoopGroup worker;
     private ChannelInboundHandler clientHandler;
@@ -94,6 +99,29 @@ public class NetworkClientStarter {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
+        }
+    }
+
+    public void refreshTunnelInfo() {
+        logger.info("开始获取隧道信息");
+        try {
+            RestClient restClient = new RestClient();
+            BaseResponse resp = restClient.baseSend(String.format(SmallAntClient.loginUrl, SmallAntClient.token), HttpMethod.GET, "", BaseResponse.class);
+            logger.debug("resp:{}", resp);
+            logger.info("隧道信息更新:{}", JsonUtils.pojoToJson(resp.getData()));
+            if (resp.getCode() != 0) {
+                logger.error("login error!");
+                logger.error("{}", JsonUtils.pojoToJson(resp.getData()));
+                throw new RuntimeException("登录失败,请检查token");
+            }
+            this.tunnelInfo = JsonUtils.jsonToPojo(JsonUtils.pojoToJson(resp.getData()), TunnelInfo.class);
+            if (tunnelInfo.getState() == -1) {
+                logger.error("您的隧道未生效或已到期，请进入web控制台(i.xiaomy.net)处理。");
+                throw new RuntimeException("隧道未生效或已到期");
+            }
+        } catch (Exception e) {
+            logger.error("获取隧道信息失败\n\t具体原因:{}", e.getMessage());
+            throw new RuntimeException("获取隧道信息失败");
         }
     }
 

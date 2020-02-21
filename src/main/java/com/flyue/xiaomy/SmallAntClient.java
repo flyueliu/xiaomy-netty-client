@@ -22,9 +22,9 @@ public class SmallAntClient {
     private static final Logger logger = LoggerFactory.getLogger(SmallAntClient.class);
     private final RestClient restClient;
 
-    private String loginUrl = "http://nw.xiaomy.net:8080/port/get/token?portToken=%s";
+    public static String loginUrl = "http://nw.xiaomy.net:8080/port/get/token?portToken=%s";
 
-    private String token;
+    public static String token;
 
     private TunnelInfo tunnelInfo;
     private NetworkClientStarter networkStarter;

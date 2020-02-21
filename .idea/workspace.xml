@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="" />
+    <list default="true" id="af5d4a48-4dab-4239-8b8d-37a245b6adbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/SmallAntClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/handler/ClientChannelHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/BaseClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/BaseClientStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flyue/xiaomy/starter/NetworkClientStarter.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +172,7 @@
       <workItem from="1582033817868" duration="8849000" />
       <workItem from="1582076339064" duration="23631000" />
       <workItem from="1582188506774" duration="2377000" />
+      <workItem from="1582249781803" duration="4857000" />
     </task>
     <task id="LOCAL-00001" summary="着手转发数据包">
       <created>1582042662425</created>

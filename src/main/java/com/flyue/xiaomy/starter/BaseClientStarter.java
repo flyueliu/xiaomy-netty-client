@@ -32,13 +32,17 @@ public class BaseClientStarter {
 
     private boolean connected = false;
     public ChannelInitializer<SocketChannel> initializer;
+    private String host;
+    private int port;
 
-    public BaseClientStarter(ChannelInitializer<SocketChannel> initializer) {
+    public BaseClientStarter(ChannelInitializer<SocketChannel> initializer, String host, int port) {
+        this(host, port);
         this.initializer = initializer;
     }
 
-    public BaseClientStarter() {
-
+    public BaseClientStarter(String host, int port) {
+        this.host = host;
+        this.port = port;
     }
 
     public void init() {
@@ -57,6 +61,21 @@ public class BaseClientStarter {
 
     public boolean connect(String host, int port) {
         this.init();
+        this.host = host;
+        this.port = port;
+        try {
+            ChannelFuture channelFuture = this.bootstrap.connect(host, port).sync();
+            this.clientChannel = channelFuture.channel();
+            this.connected = true;
+            return true;
+        } catch (Exception e) {
+            logger.error("connect {}:{} error!", host, port);
+            return false;
+        }
+    }
+
+    public boolean connect() {
+        this.init();
         try {
             ChannelFuture channelFuture = this.bootstrap.connect(host, port).sync();
             this.clientChannel = channelFuture.channel();
@@ -69,7 +88,10 @@ public class BaseClientStarter {
     }
 
     public Channel getClientChannel() {
-        return clientChannel;
+        if (Objects.isNull(clientChannel)) {
+            this.connect();
+        }
+        return this.clientChannel;
     }
 
     public void close() {
